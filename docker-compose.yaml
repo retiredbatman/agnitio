@@ -4,13 +4,13 @@ services:
     build: ./server
     container_name: agniotio-server
     ports:
-      - 8080:3000
+      - 3000:3000
 
   client:
     build: ./client
     container_name: agnitio-client
     ports:
-      - 3000:3001
+      - 3001:80
 
 volumes:
   agnitio-data:

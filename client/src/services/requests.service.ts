@@ -10,7 +10,7 @@ export const getRequests = async () => {
 }
 
 export const createRequest = async (formData: FormData) => {
-    const response = await axiosApiInstance.post('/api/requests', formData , {
+    const response = await axiosApiInstance.post(`${baseURL}/api/requests`, formData , {
         // 👇 Set headers manually for single file upload
         headers: {
           'Content-Type': 'multipart/form-data',
