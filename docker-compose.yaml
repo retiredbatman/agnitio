@@ -1,0 +1,16 @@
+version: "3"
+services:
+  server:
+    build: ./server
+    container_name: agniotio-server
+    ports:
+      - 8080:3000
+
+  client:
+    build: ./client
+    container_name: agnitio-client
+    ports:
+      - 3000:3001
+
+volumes:
+  agnitio-data:
